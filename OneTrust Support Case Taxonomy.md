@@ -1,30 +1,35 @@
 OneTrust Support Case Taxonomy (Solution / Product / Capability)
 Source: GCS May 2026 Final Taxonomy PDF, owned by OneTrust GCS.
+Use this document to determine Solution → Product → Capability during support-case intake.
+Each Product belongs to exactly one Solution; selecting a Product deterministically fixes its Solution.
+Capability is dependent on Product.
 
-Use this document to determine Solution → Product → Capability during support-case intake. Each Product belongs to exactly one Solution; selecting a Product deterministically fixes its Solution. Capability is dependent on Product.
+## Document control
+
+* **Role:** Case-field reference
+* **Authority:** Canonical for valid Solution, Product, and Capability values and their dependencies
+* **Not authoritative for:** Response style, escalation criteria, approval, submission, or general product capability evidence
+* **Load mode:** Conditional, during case intake or case-field validation
+* **Owner:** Customer Support Operations
+
+## Scope
+
+This document applies to support-case intake and case creation. It does not require Solution, Product, and Capability confirmation for ordinary product questions, troubleshooting, or navigation guidance.
+
+For case creation, infer values where confidence is sufficient, ask only about unresolved values, provide valid options, show the final values in the intake draft, and obtain customer approval before submission. Escalation Protocol owns the conversation and submission workflow.
 
 How to use this document
-When the customer is filing a support case, you MUST settle Solution / Product / Capability before invoking the case-create action. The chat intake form HIDES those three fields, so the customer can only verify them via what you say in chat first.
-
-Flow (matches Bruce Spratt's specification, 2026-05-19):
-
-If the customer has described a specific problem. Acknowledge you can raise a case, then state what you have inferred so far — name Solution, Product, and Capability explicitly. For any dimension you cannot identify with confidence, mark it as still-to-confirm and present the valid options for that dimension only. Example phrasing:
-
-Sure, I can raise a case — but first I'd like to make sure I have the details correct. From what you've told me: Solution is Privacy Automation; Product is Privacy Incident Management; I am not sure about Capability — which one of these matches best? — [list valid Capabilities under Privacy Incident Management]
-
-Iterate until the customer has confirmed all three. Even when you can infer all three with high confidence, state them back and explicitly ask the customer to confirm before drafting. Never silently guess and skip the confirmation step.
-
-If the customer's message is too vague to infer anything. Walk one question per turn:
-
-Ask about Solution — list only the seven Solutions from this document.
-After they pick a Solution, ask about Product — list only the Products under that Solution.
-After they pick a Product, ask about Capability — list only the Capabilities under that Product.
-Then confirm the full set back before drafting.
+When the customer is filing a support case, you MUST settle Solution / Product / Capability before invoking the case-create action.
+The chat intake form HIDES those three fields, so the customer can only verify them via what you say in chat first.
+Use the values below when preparing or validating a support-case intake.
 
 Rules that apply in both cases
-Use the exact strings as written in this document, including any odd whitespace or curly punctuation. Salesforce stores values as-is and rejects close-but-not-exact matches.
-Do not present options outside the chosen Solution / Product. Do not invent values not in this document.
-Do not ask the customer to volunteer Solution / Product / Capability themselves — they do not know the taxonomy. You drive the narrowing.
+Use the exact strings as written in this document, including any odd whitespace or curly punctuation.
+Salesforce stores values as-is and rejects close-but-not-exact matches.
+Do not present options outside the chosen Solution / Product.
+Do not invent values not in this document.
+Do not ask the customer to volunteer Solution / Product / Capability themselves — they do not know the taxonomy.
+You drive the narrowing.
 Consent & Preferences
 Universal Consent & Preference Management
 Admin UI
